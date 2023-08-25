@@ -50,9 +50,7 @@ $('#hour-14 .description').val(localStorage.getItem("hour-14"))
 $('#hour-15 .description').val(localStorage.getItem("hour-15"))
 $('#hour-16 .description').val(localStorage.getItem("hour-16"))
 $('#hour-17 .description').val(localStorage.getItem("hour-17"))
-$('#hour-18 .description').val(localStorage.getItem("hour-18"))
-$('#hour-19 .description').val(localStorage.getItem("hour-19"))
-$('#hour-20 .description').val(localStorage.getItem("hour-20"))
+
 
 //compare hour blocks with current time to add correct classes - 1. loop over all hours, 2. get id to compare, 3/4. compare timeId to current and apply classes accordingly
 
