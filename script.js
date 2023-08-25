@@ -59,6 +59,8 @@ $('#hour-20 .description').val(localStorage.getItem("hour-20"))
 const hourBlock = $('.tableContainer').children('div');
   for (let i = 0; i < hourBlock.length; i++) {
     let timeId = $(hourBlock[i]).attr('id').split('-')[1];
+    console.log(timeId)
+    console.log(hour)
     if (timeId < hour) {
       $(hourBlock[i]).addClass('past');
     } else if (timeId == hour) {
