@@ -1,6 +1,9 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
+
 // in the html.
+let today = dayjs()
+let hour = today.format('HH');
 $(function () {
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
@@ -51,7 +54,18 @@ $('#hour-18 .description').val(localStorage.getItem("hour-18"))
 $('#hour-19 .description').val(localStorage.getItem("hour-19"))
 $('#hour-20 .description').val(localStorage.getItem("hour-20"))
 
+//compare hour blocks with current time to add correct classes - 1. loop over all hours, 2. get id to compare, 3/4. compare timeId to current and apply classes accordingly
 
-
+const hourBlock = $('.tableContainer').children('div');
+  for (let i = 0; i < hourBlock.length; i++) {
+    let timeId = $(hourBlock[i]).attr('id');
+    if (timeId < hour) {
+      $(hourBlock[i]).addClass('past');
+    } else if (timeId == hour) {
+      $(hourBlock[i]).addClass('present');
+    } else {
+      $(hourBlock[i]).addClass('future');
+    }
+}
 
 });
