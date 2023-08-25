@@ -22,5 +22,17 @@ $(function () {
     // TODO: Add code to display the current date in the header of the page.
   });
 // Display Current date
-  let curentDate = dayjs().format('MMM D, YYYY, hh:mm a')
-  $('#currentDate').text(currentDate);
+$(function start(){
+    setInterval(function () {
+        let currentTime  = dayjs().format('MMM D, YYYY, hh:mm a')
+        $('#currentDate').text(currentTime);
+    }, 1000);
+  });
+  start ()
+
+  //save button adding to local storage
+  $(".saveBtn").on('click', function () {
+    var description = $(this).siblings('.description').val()
+    var timeBlock = $(this).parent().attr('id')
+    localStorage.setItem(timeBlock, description);
+});
