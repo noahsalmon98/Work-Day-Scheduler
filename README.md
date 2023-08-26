@@ -34,3 +34,8 @@ Dayjs
 ![Screenshot of scheduler](./images/Screen%20Shot%202023-08-25%20at%206.03.10%20PM.png)
 
 ## URL
+https://noahsalmon98.github.io/Work-Day-Scheduler/
+
+## Code Source
+
+Used ChatGPT and StackOverflow when confused.
